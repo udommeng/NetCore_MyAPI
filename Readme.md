@@ -112,8 +112,25 @@ return CreatedAtRoute("GetProduct", new { product_id = model.ProductId},model);
 
 5. กำหนดที่  Configure ที่ไฟล์  Startup.cs 
 ```
+    app.UseCors(ชื่อ Policy);
+```
+
+    ตัวอย่างการใช้
+```
     app.UseCors("AllowAll");
 ```
+
+6. คุมระดับ Controller เหรอ Action กำหนด 
+
+```
+[EnableCors("custom")]
+```
+เช่น
+
+```
+
+```
+
 
 # Docker
 1.
